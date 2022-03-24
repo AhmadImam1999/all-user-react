@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-page-header {
+  border: 1px solid rgb(235, 237, 240);
+  margin: 20px 0 !important;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.map img {
+  width: 30px;
+  height: 30px;
+}
+
+.map h5 {
+  margin-top: 3px;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
