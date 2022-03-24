@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { fetchUsers } from './redux/users/user-slice';
 import Navbar from './components/navbar/navbar.components';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'antd';
 import AllUsers from './pages/AllUsers';
 import UserDetail from './pages/UserDetail';
@@ -21,10 +21,10 @@ function App() {
     <Fragment>
       <Navbar />
       <Content style={{ padding: '0 50px' }}>
-        <Routes>
-          <Route path="/" element={<AllUsers />} />
-          <Route path="/:userName" element={<UserDetail />} />
-        </Routes>
+        <Switch>
+          <Route exact path="/"  component={AllUsers} />
+          <Route exact path="/:userName" component={UserDetail} />
+        </Switch>
       </Content>
     </Fragment>
   );

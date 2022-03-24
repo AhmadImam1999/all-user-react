@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // import { Content } from 'antd/es/layout/layout';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Empty } from 'antd';
 import columns from './columns';
 import { Button, Input, Table, Card, Space } from 'antd';
@@ -10,7 +10,7 @@ import { filterData } from '../../redux/users/user-slice';
 import Loading from '../loading/loading.component';
 
 function Lists({ data, isLoading }) {
-  const history = useNavigate();
+  const history = useHistory();
   const [search, setSearch] = useState('');
   const dispatch = useDispatch();
 
@@ -52,7 +52,7 @@ function Lists({ data, isLoading }) {
             onRow={(record, rowIndex) => {
               return {
                 onClick: (event) => {
-                  history(`/${record.name.first}`);
+                  history.push(`/${record.name.first}`);
                 },
               };
             }}
